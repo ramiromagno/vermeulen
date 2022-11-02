@@ -3,9 +3,17 @@
 \name{amplification_curves}
 \alias{amplification_curves}
 \title{Amplification curves}
-\format{
-A data frame with NULL
-amplification curves, 50 cycles each:
+\source{
+\itemize{
+\item Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
+\item Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011}.
+}
+}
+\usage{
+amplification_curves()
+}
+\value{
+A data frame with 24,576 amplification curves, 50 cycles each:
 
 \describe{
 \item{\code{plate}}{Plate identifier. Because one plate was used per gene, the
@@ -17,20 +25,11 @@ so the value is always \code{"SYBR"}.}
 \item{\code{fluor}}{Raw fluorescence values.}
 }
 }
-\source{
-\itemize{
-\item Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
-\item Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011}.
-}
-}
-\usage{
-amplification_curves()
-}
 \description{
 A data set containing raw fluorescence amplification data. Data is
 obtained from Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011} but original
 source is by Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
 }
 \seealso{
-\code{reactions} \code{targets} \code{samples}
+\code{reactions()} \code{targets()} \code{samples()}
 }

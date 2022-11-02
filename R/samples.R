@@ -4,8 +4,7 @@
 #' obtained from Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011} but original
 #' source is by Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
 #'
-#' @format A data frame with `r nrow(samples)`
-#' samples and `r ncol(samples)` variables:
+#' @return A data frame with 372 samples and 3 variables:
 #'
 #' \describe{
 #' \item{`sample`}{Sample identifier.}
@@ -13,13 +12,14 @@
 #' \item{`dilution`}{Dilution factor. Higher number means greater dilution.}
 #' }
 #'
-#' @seealso `amplification_curves` `targets` `reactions`
+#' @seealso `amplification_curves()` `targets()` `reactions()`
 #'
 #' @source
 #' - Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
 #' - Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011}.
 #'
+#' @export
 samples <- function() {
-  url <- "https://raw.githubusercontent.com/ramiromagno/vermeulen/main/data-raw/samples.csv"
-  readr::read_csv(file = url)
+  url <- file.path(repo(), "main/data-raw/samples.csv.gz")
+  read.csv(file = url, colClasses = c("factor", "factor", "double"))
 }

@@ -3,16 +3,6 @@
 \name{samples}
 \alias{samples}
 \title{Samples}
-\format{
-A data frame with
-samples and  variables:
-
-\describe{
-\item{\code{sample}}{Sample identifier.}
-\item{\code{sample_type}}{Sample type.}
-\item{\code{dilution}}{Dilution factor. Higher number means greater dilution.}
-}
-}
 \source{
 \itemize{
 \item Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
@@ -22,11 +12,20 @@ samples and  variables:
 \usage{
 samples()
 }
+\value{
+A data frame with 372 samples and 3 variables:
+
+\describe{
+\item{\code{sample}}{Sample identifier.}
+\item{\code{sample_type}}{Sample type.}
+\item{\code{dilution}}{Dilution factor. Higher number means greater dilution.}
+}
+}
 \description{
 A data set containing the metadata associated with each sample. Data is
 obtained from Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011} but original
 source is by Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
 }
 \seealso{
-\code{amplification_curves} \code{targets} \code{reactions}
+\code{amplification_curves()} \code{targets()} \code{reactions()}
 }

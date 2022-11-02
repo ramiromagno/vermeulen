@@ -3,16 +3,6 @@
 \name{targets}
 \alias{targets}
 \title{Targets}
-\format{
-A data frame with  targets and
-variables:
-
-\describe{
-\item{\code{target}}{Target identifier, in almost all cases the name of a gene.}
-\item{\code{target_type}}{Target type: either target of interest (\code{"toi"}) or
-reference target (\code{"ref"}).}
-}
-}
 \source{
 \itemize{
 \item Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
@@ -22,11 +12,20 @@ reference target (\code{"ref"}).}
 \usage{
 targets()
 }
+\value{
+A data frame with 64 targets and two variables:
+
+\describe{
+\item{\code{target}}{Target identifier, in almost all cases the name of a gene.}
+\item{\code{target_type}}{Target type: either target of interest (\code{"toi"}) or
+reference target (\code{"ref"}).}
+}
+}
 \description{
 A data set containing the metadata associated with each target. Data is
 obtained from Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011} but original
 source is by Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
 }
 \seealso{
-\code{amplification_curves} \code{reactions} \code{samples}
+\code{amplification_curves()} \code{reactions()} \code{samples()}
 }

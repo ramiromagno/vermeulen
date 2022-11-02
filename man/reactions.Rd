@@ -3,7 +3,16 @@
 \name{reactions}
 \alias{reactions}
 \title{Reactions}
-\format{
+\source{
+\itemize{
+\item Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
+\item Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011}.
+}
+}
+\usage{
+reactions()
+}
+\value{
 A data frame with 24,576 reactions and 5 variables:
 
 \describe{
@@ -16,15 +25,6 @@ so the value is always \code{"SYBR"}.}
 \item{\code{target}}{Target.}
 }
 }
-\source{
-\itemize{
-\item Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
-\item Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011}.
-}
-}
-\usage{
-reactions()
-}
 \description{
 A data set containing the metadata associated with each qPCR well and
 respective reaction mix. Data is obtained from Ruijter (2013),
@@ -32,5 +32,5 @@ respective reaction mix. Data is obtained from Ruijter (2013),
 \doi{10.1016/S1470-2045(09)70154-8}.
 }
 \seealso{
-\code{amplification_curves} \code{targets} \code{samples}
+\code{amplification_curves()} \code{targets()} \code{samples()}
 }

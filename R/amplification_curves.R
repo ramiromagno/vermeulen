@@ -4,8 +4,7 @@
 #' obtained from Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011} but original
 #' source is by Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
 #'
-#' @format A data frame with `r format(nrow(reactions), big.mark = ",")`
-#' amplification curves, 50 cycles each:
+#' @return A data frame with 24,576 amplification curves, 50 cycles each:
 #'
 #' \describe{
 #' \item{`plate`}{Plate identifier. Because one plate was used per gene, the
@@ -17,13 +16,14 @@
 #' \item{`fluor`}{Raw fluorescence values.}
 #' }
 #'
-#' @seealso `reactions` `targets` `samples`
+#' @seealso `reactions()` `targets()` `samples()`
 #'
 #' @source
 #' - Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
 #' - Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011}.
 #'
+#' @export
 amplification_curves <- function() {
-  url <- "https://raw.githubusercontent.com/ramiromagno/vermeulen/main/data-raw/amplification_curves.csv"
-  readr::read_csv(file = url)
+  url <- file.path(repo(), "main/data-raw/amplification_curves.csv.gz")
+  read.csv(file = url, colClasses = c("factor", "factor", "factor", "integer", "double"))
 }

@@ -4,8 +4,7 @@
 #' obtained from Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011} but original
 #' source is by Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
 #'
-#' @format A data frame with `r nrow(targets)` targets and `r ncol(targets)`
-#' variables:
+#' @return A data frame with 64 targets and two variables:
 #'
 #' \describe{
 #' \item{`target`}{Target identifier, in almost all cases the name of a gene.}
@@ -13,7 +12,7 @@
 #' reference target (`"ref"`).}
 #' }
 #'
-#' @seealso `amplification_curves` `reactions` `samples`
+#' @seealso `amplification_curves()` `reactions()` `samples()`
 #'
 #' @source
 #' - Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
@@ -21,6 +20,6 @@
 #'
 #' @export
 targets <- function() {
-  url <- "https://raw.githubusercontent.com/ramiromagno/vermeulen/main/data-raw/targets.csv"
-  readr::read_csv(file = url)
+  url <- file.path(repo(), "main/data-raw/targets.csv.gz")
+  read.csv(file = url, colClasses = c("factor", "factor"))
 }
