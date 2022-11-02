@@ -29,8 +29,8 @@ remotes::install_github("ramiromagno/vermeulen")
 ## Usage
 
 Because of CRAN size limits the data is not provided at installation
-time. The data can be retrieved after installation with a set of helper
-functions from this GitHub repository:
+time. The data can be retrieved from this GitHub repository after
+installation with the following helper functions :
 
 -   `amplification_curves()`
 -   `reactions()`
