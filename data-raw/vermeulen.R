@@ -32,6 +32,7 @@
 
 library(tidyverse)
 library(readxl)
+library(float)
 
 data_dir <- here::here("data-raw")
 archive_path <- file.path(data_dir, "qpcrdatamethods.zip")
@@ -135,7 +136,15 @@ amplification_curves <-
   ) %>%
   dplyr::relocate(plate, well, dye, cycle, fluor)
 
-usethis::use_data(reactions, overwrite = TRUE)
-usethis::use_data(samples, overwrite = TRUE)
-usethis::use_data(targets, overwrite = TRUE)
-usethis::use_data(amplification_curves, overwrite = TRUE)
+# # Remove the fluorescence column
+# amplification_curves_stub <-
+#   amplification_curves %>%
+#   dplyr::select(-"fluor")
+#
+# # Create a single precision version of `fluor`
+# fluor <- float::as.float(amplification_curves$fluor)
+
+readr::write_csv(reactions, file = file.path(data_dir, "reactions.csv"))
+readr::write_csv(samples, file = file.path(data_dir, "samples.csv"))
+readr::write_csv(targets, file = file.path(data_dir, "targets.csv"))
+readr::write_csv(amplification_curves, file = file.path(data_dir, "amplification_curves.csv"))

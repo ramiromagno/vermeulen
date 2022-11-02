@@ -19,4 +19,7 @@
 #' - Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
 #' - Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011}.
 #'
-"samples"
+samples <- function() {
+  url <- "https://raw.githubusercontent.com/ramiromagno/vermeulen/main/data-raw/samples.csv"
+  readr::read_csv(file = url)
+}

@@ -5,8 +5,7 @@
 #' \doi{10.1016/j.ymeth.2012.08.011} but original source is by Vermeulen (2009),
 #' \doi{10.1016/S1470-2045(09)70154-8}.
 #'
-#' @format A data frame with `r format(nrow(reactions), big.mark = ",")`
-#' reactions and `r ncol(reactions)` variables:
+#' @format A data frame with 24,576 reactions and 5 variables:
 #'
 #' \describe{
 #' \item{`plate`}{Plate identifier. Because one plate was used per gene, the
@@ -24,4 +23,9 @@
 #' - Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
 #' - Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011}.
 #'
-"reactions"
+#'@export
+reactions <- function() {
+  url <- "https://raw.githubusercontent.com/ramiromagno/vermeulen/main/data-raw/reactions.csv"
+  readr::read_csv(file = url)
+}
+
