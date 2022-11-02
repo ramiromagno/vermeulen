@@ -30,7 +30,7 @@ remotes::install_github("ramiromagno/vermeulen")
 
 Because of CRAN size limits the data is not provided at installation
 time. The data can be retrieved after installation with a set of helper
-functions this GitHub repository:
+functions from this GitHub repository:
 
 -   `amplification_curves()`
 -   `reactions()`
