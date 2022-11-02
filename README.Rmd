@@ -38,7 +38,9 @@ remotes::install_github("ramiromagno/vermeulen")
 
 ## Usage
 
-I provide a set of helper functions that download each of the data sets from <https://github.com/ramiromagno/vermeulen>:
+Because of CRAN size limits the data is not provided at installation time. The
+data can be retrieved after installation with a set of helper functions this
+GitHub repository:
 
 - `amplification_curves()`
 - `reactions()`
