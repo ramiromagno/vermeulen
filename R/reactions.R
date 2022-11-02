@@ -26,6 +26,6 @@
 #'@export
 reactions <- function() {
   url <- file.path(repo(), "main/data-raw/reactions.csv.gz")
-  read.csv(file = url, colClasses = c("factor", "factor", "factor", "character", "factor"))
+  utils::read.csv(file = url, colClasses = c("factor", "factor", "factor", "character", "factor"))
 }
 

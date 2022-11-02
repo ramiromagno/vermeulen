@@ -25,5 +25,5 @@
 #' @export
 amplification_curves <- function() {
   url <- file.path(repo(), "main/data-raw/amplification_curves.csv.gz")
-  read.csv(file = url, colClasses = c("factor", "factor", "factor", "integer", "double"))
+  utils::read.csv(file = url, colClasses = c("factor", "factor", "factor", "integer", "double"))
 }

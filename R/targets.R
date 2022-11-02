@@ -21,5 +21,5 @@
 #' @export
 targets <- function() {
   url <- file.path(repo(), "main/data-raw/targets.csv.gz")
-  read.csv(file = url, colClasses = c("factor", "factor"))
+  utils::read.csv(file = url, colClasses = c("factor", "factor"))
 }
