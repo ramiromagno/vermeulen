@@ -21,5 +21,6 @@
 #' @export
 samples <- function() {
   url <- file.path(repo(), "main/data-raw/samples.csv.gz")
-  utils::read.csv(file = url, colClasses = c("factor", "factor", "double"))
+  txt <- readLines(gzcon(url(url)))
+  utils::read.csv(file = textConnection(txt), colClasses = c("factor", "factor", "double"))
 }
