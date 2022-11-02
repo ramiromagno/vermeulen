@@ -101,7 +101,7 @@ reactions <-
 # 9, 2009. DOI:10.1016/S1470-2045(09)70154-8.
 # URL: https://ars.els-cdn.com/content/image/1-s2.0-S1470204509701548-mmc1.pdf
 #
-ref_genes <- c("HPRT1", "SDHA", "UBC", "HMBS", "ALUsq(Eurogentec)")
+ref_genes <- c("HPRT1", "SDHA", "UBC", "HMBS", "ALUsq")
 
 targets <-
   reactions %>%
