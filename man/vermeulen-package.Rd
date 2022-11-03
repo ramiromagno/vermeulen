@@ -4,9 +4,9 @@
 \name{vermeulen-package}
 \alias{vermeulen}
 \alias{vermeulen-package}
-\title{vermeulen: Vermeulen's Biomarker Data Set}
+\title{vermeulen: 'Biomarker' Data Set by 'Vermeulen et al.' (2009)}
 \description{
-The biomarker data set by Vermeulen (2009) \doi{10.1016/S1470-2045(09)70154-8} but as provided by Ruijter (2013) \doi{10.1016/j.ymeth.2012.08.011}. This data set is for a real-time quantitative PCR experiment that comprises the raw fluorescence data of 24,576 amplification curves. This data set comprises 59 genes of interest and 5 reference genes. Each gene was assessed on 366 neuroblastoma cDNA samples and on 18 dilution series samples (10-fold 5-point dilution series x 3 replicates + NTC x 3 replicates).
+The 'biomarker' data set by 'Vermeulen' (2009) \doi{10.1016/S1470-2045(09)70154-8} but as provided by 'Ruijter' (2013) \doi{10.1016/j.ymeth.2012.08.011}. This data set is for a real-time quantitative 'PCR' experiment that comprises the raw fluorescence data of 24,576 amplification curves. This data set comprises 59 genes of interest and 5 reference genes. Each gene was assessed on 366 'neuroblastoma' 'cDNA' samples and on 18 dilution series samples (10-fold 5-point dilution series x 3 replicates + 'NTC' x 3 replicates).
 }
 \author{
 \strong{Maintainer}: Ramiro Magno \email{ramiro.magno@gmail.com} (\href{https://orcid.org/0000-0001-5226-3441}{ORCID})
