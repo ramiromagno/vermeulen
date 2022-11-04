@@ -108,71 +108,8 @@ internet connection.</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu">targets</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     target target_type</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   CAMTA2         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   CAMTA1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    BIRC5         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  ARHGEF7         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    ALUsq         ref</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6   AKR1C1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7     AHCY         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8    ECEL1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9   DPYSL3         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10     DDC         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11   CPSG3         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12  CLSTN1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13   CDKN3         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14    CDH5         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15   CDCA5         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16    CD44         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17   MRPL3         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18    MCM2         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19    MAPT         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20    MAP7         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21  MAP2K4         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22   INPP1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23   IGSF4         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24   HPRT1         ref</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25    HMBS         ref</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26  HIVEP2         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27    GNB1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28     FYN         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29    EPN2         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30   EPHA5         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31 EPB41L3         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32  ELAVL4         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33  PRKACB         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34   PRDM2         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35   PRAME         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36   PMP22         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37    PLAT         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38  PLAGL1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39  PIK3R1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40 PDE4DIP         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41   PAICS         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42    ODC1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43   NTRK1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44   NRCAM         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45   NM23A         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46   NHLH2         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47    MYCN         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48   MTSS1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49    WSB1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50    ULK2         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51     UBC         ref</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52    TYMS         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53  TNFRSF         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54  SNAPC1         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55 SLC25A5         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56  SLC6A8         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57    SDHA         ref</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58    SCG2         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59    QPCT         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60  PTPRN2         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61   PTPRH         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62   PTPRF         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63     PTN         toi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64   PRKCZ         toi</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Error in targets() : could not find function "targets"</span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
