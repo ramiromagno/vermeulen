@@ -16,16 +16,11 @@
 #' reference target (`"ref"`).}
 #' }
 #'
-#' @seealso `amplification_curves()` `reactions()` `samples()`
-#'
 #' @source
 #' - \url{https://medischebiologie.nl/wp-content/uploads/2019/02/qpcrdatamethods.zip}
 #' - \url{https://github.com/ramiromagno/vermeulen/blob/main/data-raw/targets.csv.gz}
 #'
-#' @examples
-#' try(targets())
-#'
-#'
+#' @noRd
 targets <- function() {
   url <- file.path(repo(), "main/data-raw/targets.csv.gz")
   txt <- readLines(gzcon(url(url)))

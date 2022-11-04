@@ -17,15 +17,11 @@
 #' \item{`dilution`}{Dilution factor. Higher number means greater dilution.}
 #' }
 #'
-#' @seealso `amplification_curves()` `targets()` `reactions()`
-#'
 #' @source
 #' - \url{https://medischebiologie.nl/wp-content/uploads/2019/02/qpcrdatamethods.zip}
 #' - \url{https://github.com/ramiromagno/vermeulen/blob/main/data-raw/samples.csv.gz}
 #'
-#' @examples
-#' try(samples())
-#'
+#' @noRd
 samples <- function() {
   url <- file.path(repo(), "main/data-raw/samples.csv.gz")
   txt <- readLines(gzcon(url(url)))

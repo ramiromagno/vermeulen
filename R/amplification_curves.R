@@ -20,18 +20,11 @@
 #' \item{`fluor`}{Raw fluorescence values.}
 #' }
 #'
-#' @seealso `reactions()` `targets()` `samples()`
-#'
 #' @source
 #' - \url{https://medischebiologie.nl/wp-content/uploads/2019/02/qpcrdatamethods.zip}
 #' - \url{https://github.com/ramiromagno/vermeulen/blob/main/data-raw/amplification_curves.csv.gz}
 #'
-#' @examples
-#' \dontrun{
-#' # Takes ~ 8 sec
-#' amplification_curves()
-#' }
-#'
+#' @noRd
 amplification_curves <- function() {
   url <- file.path(repo(), "main/data-raw/amplification_curves.csv.gz")
   txt <- readLines(gzcon(url(url)))

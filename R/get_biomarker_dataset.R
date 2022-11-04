@@ -49,9 +49,9 @@
 #' - \url{https://github.com/ramiromagno/vermeulen/tree/main/data-raw}
 #'
 #' @examples
-#' \dontrun{
-#' # Takes ~ 8 sec
-#' get_biomarker_dataset()
+#' \donttest{
+#' # Takes ~ 10-30 sec
+#' head(get_biomarker_dataset())
 #' }
 #'
 #' @export

@@ -59,9 +59,9 @@ no template control (NTC, n = 3). Raw (baseline uncorrected) fluorescent data
 were exported from the LightCycler480 instrument software.
 }
 \examples{
-\dontrun{
-# Takes ~ 8 sec
-get_biomarker_dataset()
+\donttest{
+# Takes ~ 10-30 sec
+head(get_biomarker_dataset())
 }
 
 }
