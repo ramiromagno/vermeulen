@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
+[![CRAN status](https://www.r-pkg.org/badges/version/vermeulen)](https://CRAN.R-project.org/package=vermeulen)
 <!-- badges: end -->
 
 `{vermeulen}` provides the Biomarker data set by [Vermeulen et al.
@@ -48,16 +49,15 @@ remotes::install_github("ramiromagno/vermeulen")
 
 Because of CRAN size limits the data is not provided at installation time. The
 data can be retrieved from this GitHub repository after installation with the
-function `ds_biomarker()`.
+function `get_biomarker_dataset()`.
 
 ```{r message=FALSE, warning=FALSE}
 library(vermeulen)
 library(tibble)
 library(dplyr)
-library(ggplot2)
 
 # Takes a few seconds (downloading from GitHub...)
-biomarker <- as_tibble(ds_biomarker())
+biomarker <- as_tibble(get_biomarker_dataset())
 biomarker
 ```
 
@@ -72,13 +72,6 @@ count(
 )
 ```
 
-Alternatively, if you want only a selection of variables you may use the 
-following helpers:
-
-- `amplification_curves()`
-- `reactions()`
-- `targets()`
-- `samples()`
 
 ## Code of Conduct
 

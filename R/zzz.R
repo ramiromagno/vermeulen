@@ -8,5 +8,5 @@
   samples <<- memoise::memoise(samples)
   reactions <<- memoise::memoise(reactions)
   targets <<- memoise::memoise(targets)
-  ds_biomarker <<- memoise::memoise(ds_biomarker)
+  ds_biomarker <<- memoise::memoise(get_biomarker_dataset)
 }

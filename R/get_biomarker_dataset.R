@@ -1,15 +1,31 @@
-#' Biomarker data set
+#' Import the Biomarker data set
 #'
-#' This function retrieves the biomarker data set, a data set containing raw
-#' fluorescence amplification data. Data was gathered from from Ruijter et al.
+#' This function retrieves the Biomarker data set, a data set containing raw
+#' fluorescence amplification data: 24,576 amplification curves, of 50 cycles
+#' each.
+#'
+#' @details
+#' Data was gathered from Ruijter et al.
 #' (2013), \doi{10.1016/j.ymeth.2012.08.011} but original source is by Vermeulen
 #' et al. (2009), \doi{10.1016/S1470-2045(09)70154-8}.
-#'
 #' The tidy version of the data is kept at the repository of the source of
 #' `{vermeulen}` package. This function fetches such data and thus requires
 #' internet connection. It takes a few seconds to run.
 #'
-#' @return A data frame with 24,576 amplification curves, 50 cycles each:
+#' The Biomarker data set comprises a set of 59 targets previously identified as
+#' a 59-mRNA gene expression signature, that has been developed and validated for
+#' improved outcome prediction of children with neuroblastoma. In short, 59
+#' biomarkers and 5 reference genes were measured in 8 µl reactions in a
+#' 384-well plate using the LightCycler480 SYBR Green Master (Roche) in a sample
+#' maximization experiment design. The 59 genes were carefully selected as being
+#' previously reported as prognostic genes in neuroblastoma in at least two
+#' independent studies. Each plate contained 366 cDNA samples (n = 1) from
+#' primary tumor biopsies, a 5-point 10-fold serial dilution series based on an
+#' external oligonucleotide standard (n = 3, from 150,000 to 15 copies), and a
+#' no template control (NTC, n = 3). Raw (baseline uncorrected) ﬂuorescent data
+#' were exported from the LightCycler480 instrument software.
+#'
+#' @return A data frame with 24,576 amplification curves, of 50 cycles each:
 #'
 #' \describe{
 #' \item{`plate`}{Plate identifier. Because one plate was used per gene, the
@@ -35,11 +51,11 @@
 #' @examples
 #' \dontrun{
 #' # Takes ~ 8 sec
-#' ds_biomarker()
+#' get_biomarker_dataset()
 #' }
 #'
 #' @export
-ds_biomarker <- function() {
+get_biomarker_dataset <- function() {
 
   amplification_curves <- amplification_curves()
   samples <- samples()

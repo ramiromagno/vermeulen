@@ -16,7 +16,7 @@ library(tibble)
 library(ggplot2)
 
 # Takes a few seconds (downloading from GitHub...)
-biomarker <- as_tibble(ds_biomarker())
+biomarker <- as_tibble(get_biomarker_dataset())
 
 biomarker %>%
   ggplot(mapping = aes(x = cycle, y = fluor, group = interaction(plate, well), col = sample_type)) +

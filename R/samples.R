@@ -26,7 +26,6 @@
 #' @examples
 #' try(samples())
 #'
-#' @export
 samples <- function() {
   url <- file.path(repo(), "main/data-raw/samples.csv.gz")
   txt <- readLines(gzcon(url(url)))

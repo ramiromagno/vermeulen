@@ -30,7 +30,6 @@
 #' @examples
 #' try(reactions())
 #'
-#'@export
 reactions <- function() {
   url <- file.path(repo(), "main/data-raw/reactions.csv.gz")
   txt <- readLines(gzcon(url(url)))

@@ -4,6 +4,9 @@
 # vermeulen
 
 <!-- badges: start -->
+
+[![CRAN
+status](https://www.r-pkg.org/badges/version/vermeulen)](https://CRAN.R-project.org/package=vermeulen)
 <!-- badges: end -->
 
 `{vermeulen}` provides the Biomarker data set by [Vermeulen et al.
@@ -37,16 +40,15 @@ remotes::install_github("ramiromagno/vermeulen")
 
 Because of CRAN size limits the data is not provided at installation
 time. The data can be retrieved from this GitHub repository after
-installation with the function `ds_biomarker()`.
+installation with the function `get_biomarker_dataset()`.
 
 ``` r
 library(vermeulen)
 library(tibble)
 library(dplyr)
-library(ggplot2)
 
 # Takes a few seconds (downloading from GitHub...)
-biomarker <- as_tibble(ds_biomarker())
+biomarker <- as_tibble(get_biomarker_dataset())
 biomarker
 #> # A tibble: 1,226,880 × 11
 #>    plate well  dye   target target_t…¹ sample sampl…² copies dilut…³ cycle fluor
@@ -86,14 +88,6 @@ count(
 #> 6 std         150000        1   192
 #> 7 unk             NA       NA 23424
 ```
-
-Alternatively, if you want only a selection of variables you may use the
-following helpers:
-
--   `amplification_curves()`
--   `reactions()`
--   `targets()`
--   `samples()`
 
 ## Code of Conduct
 

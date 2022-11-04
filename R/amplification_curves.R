@@ -32,7 +32,6 @@
 #' amplification_curves()
 #' }
 #'
-#' @export
 amplification_curves <- function() {
   url <- file.path(repo(), "main/data-raw/amplification_curves.csv.gz")
   txt <- readLines(gzcon(url(url)))
