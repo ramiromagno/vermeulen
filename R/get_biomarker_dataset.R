@@ -22,7 +22,7 @@
 #' independent studies. Each plate contained 366 cDNA samples (n = 1) from
 #' primary tumor biopsies, a 5-point 10-fold serial dilution series based on an
 #' external oligonucleotide standard (n = 3, from 150,000 to 15 copies), and a
-#' no template control (NTC, n = 3). Raw (baseline uncorrected) ﬂuorescent data
+#' no template control (NTC, n = 3). Raw (baseline uncorrected) fluorescent data
 #' were exported from the LightCycler480 instrument software.
 #'
 #' @return A data frame with 24,576 amplification curves, of 50 cycles each:
