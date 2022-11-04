@@ -143,10 +143,24 @@ were exported from the LightCycler480 instrument software.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span><span class="co"># Takes ~ 8 sec</span></span></span>
-<span class="r-in"><span><span class="fu">get_biomarker_dataset</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># Takes ~ 10-30 sec</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">get_biomarker_dataset</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   plate well  dye target target_type sample sample_type copies dilution cycle</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  AHCY   A1 SYBR   AHCY         toi   1495         unk     NA       NA     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  AHCY   A1 SYBR   AHCY         toi   1495         unk     NA       NA     2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  AHCY   A1 SYBR   AHCY         toi   1495         unk     NA       NA     3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  AHCY   A1 SYBR   AHCY         toi   1495         unk     NA       NA     4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  AHCY   A1 SYBR   AHCY         toi   1495         unk     NA       NA     5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  AHCY   A1 SYBR   AHCY         toi   1495         unk     NA       NA     6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      fluor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1.102538</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 1.453846</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 1.463030</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 1.471323</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 1.473840</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 1.453012</span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
