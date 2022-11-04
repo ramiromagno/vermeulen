@@ -79,18 +79,20 @@ reactions <-
     grepl(pattern = "water", sample) ~ "ntc",
     TRUE ~ "unk"
   )) %>%
-  tidyr::separate(col = "sample", into = c("standard", "dilution"), sep = "_", remove = FALSE, fill = "right") %>%
-  dplyr::mutate(dilution = as.double(dilution)) %>%
-  dplyr::mutate(dilution = dplyr::if_else(sample == "water", Inf, dilution),
-                target = dplyr::if_else(sample == "water", NA_character_, target)) %>%
+  tidyr::separate(col = "sample", into = c("standard", "copies"), sep = "_", remove = FALSE, fill = "right") %>%
+  dplyr::mutate(copies = as.double(copies)) %>%
+  dplyr::mutate(copies = dplyr::if_else(sample == "water", 0, copies),
+                target = dplyr::if_else(sample == "water", NA_character_, target),
+                dilution = 150000 / copies) %>%
   dplyr::select(-"standard") %>%
-  dplyr::relocate(plate, well, dye, sample, target, sample_type, dilution) %>%
+  dplyr::relocate(plate, well, dye, sample, target, sample_type, copies, dilution) %>%
   dplyr::mutate(
     plate = factor(plate),
     well = factor(well),
     dye = factor(dye),
     target = factor(target),
-    sample_type = factor(sample_type)
+    sample_type = factor(sample_type),
+    copies = as.integer(copies)
   )
 
 # `targets`
@@ -115,12 +117,12 @@ targets <-
 #
 #
 samples <-
-  dplyr::distinct(reactions, sample, sample_type, dilution) %>%
-  dplyr::arrange(sample, sample_type, dilution)
+  dplyr::distinct(reactions, sample, sample_type, copies, dilution) %>%
+  dplyr::arrange(sample, sample_type, copies, dilution)
 
 # Because we have already these two columns in `samples`, there is not need
 # to keep them in the `reactions` data frame too.
-reactions <- dplyr::select(reactions, -c("sample_type", "dilution"))
+reactions <- dplyr::select(reactions, -c("sample_type", "copies", "dilution"))
 
 # `amplification_curves`: amplification curve data (raw fluorescence data).
 amplification_curves <-

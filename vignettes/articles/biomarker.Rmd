@@ -1,0 +1,25 @@
+---
+title: "Biomarker data set"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(vermeulen)
+library(tidyverse)
+```
+
+
+```{r dpi=300, fig.width=8, fig.height=16}
+biomarker %>%
+  ggplot(mapping = aes(x = cycle, y = fluor, group = interaction(plate, well), col = sample_type)) +
+  geom_line() +
+  facet_wrap(vars(target), ncol = 4) +
+  geom_line(size = 0.1)
+```
+

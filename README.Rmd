@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+library(tidyverse)
 ```
 
 # vermeulen
@@ -19,7 +20,8 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-`{vermeulen}` provides the biomarker data set by [Vermeulen et al. (2009)](https://doi.org/10.1016/S1470-2045(09)70154-8) in tidy format.
+`{vermeulen}` provides the Biomarker data set by [Vermeulen et al.
+(2009)](https://doi.org/10.1016/S1470-2045(09)70154-8) in tidy format.
 
 This data set is for a real-time quantitative PCR experiment that comprises:
 
@@ -29,7 +31,14 @@ This data set is for a real-time quantitative PCR experiment that comprises:
 
 ## Installation
 
-Currently you can install `{vermeulen}` from GitHub only:
+Install `{vermeulen}` from CRAN:
+
+``` r
+# Install from CRAN
+install.packages("vermeulen")
+```
+
+You can instead install the development version of `{vermeulen}` from GitHub:
 
 ``` r
 # install.packages("remotes")
@@ -40,7 +49,30 @@ remotes::install_github("ramiromagno/vermeulen")
 
 Because of CRAN size limits the data is not provided at installation time. The
 data can be retrieved from this GitHub repository after installation with the
-following helper functions :
+function `ds_biomarker()`.
+
+```{r}
+library(vermeulen)
+library(tidyverse)
+
+# Takes a few seconds (downloading from GitHub...)
+biomarker <- as_tibble(ds_biomarker())
+biomarker
+```
+
+Types of samples:
+
+```{r}
+count(
+  distinct(biomarker, plate, well, sample_type, copies, dilution),
+  sample_type,
+  copies,
+  dilution
+)
+```
+
+Alternatively, if you want only a selection of variables you may use the 
+following helpers:
 
 - `amplification_curves()`
 - `reactions()`

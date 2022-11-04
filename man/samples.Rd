@@ -5,8 +5,8 @@
 \title{Samples}
 \source{
 \itemize{
-\item Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
-\item Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011}.
+\item \url{https://medischebiologie.nl/wp-content/uploads/2019/02/qpcrdatamethods.zip}
+\item \url{https://github.com/ramiromagno/vermeulen/blob/main/data-raw/samples.csv.gz}
 }
 }
 \usage{
@@ -18,6 +18,7 @@ A data frame with 372 samples and 3 variables:
 \describe{
 \item{\code{sample}}{Sample identifier.}
 \item{\code{sample_type}}{Sample type.}
+\item{\code{copies}}{Standard copy number.}
 \item{\code{dilution}}{Dilution factor. Higher number means greater dilution.}
 }
 }
@@ -25,6 +26,15 @@ A data frame with 372 samples and 3 variables:
 A data set containing the metadata associated with each sample. Data is
 obtained from Ruijter (2013), \doi{10.1016/j.ymeth.2012.08.011} but original
 source is by Vermeulen (2009), \doi{10.1016/S1470-2045(09)70154-8}.
+}
+\details{
+The tidy version of the data is kept at the repository of the source of
+\code{{vermeulen}} package. This function fetches such data and thus requires
+internet connection.
+}
+\examples{
+try(samples())
+
 }
 \seealso{
 \code{amplification_curves()} \code{targets()} \code{reactions()}
