@@ -31,7 +31,8 @@ Suggests:
     dplyr,
     ggplot2,
     rmarkdown,
-    spelling
+    spelling,
+    tibble
 Language: en-US
 URL: https://github.com/ramiromagno/vermeulen,
     http://rmagno.eu/vermeulen/

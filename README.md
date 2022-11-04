@@ -39,6 +39,62 @@ Because of CRAN size limits the data is not provided at installation
 time. The data can be retrieved from this GitHub repository after
 installation with the function `ds_biomarker()`.
 
+``` r
+library(vermeulen)
+library(tibble)
+library(dplyr)
+#> 
+#> Attaching package: 'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
+library(ggplot2)
+
+# Takes a few seconds (downloading from GitHub...)
+biomarker <- as_tibble(ds_biomarker())
+biomarker
+#> # A tibble: 1,226,880 × 11
+#>    plate well  dye   target target_t…¹ sample sampl…² copies dilut…³ cycle fluor
+#>    <fct> <fct> <fct> <fct>  <fct>      <chr>  <fct>    <int>   <dbl> <int> <dbl>
+#>  1 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     1  1.10
+#>  2 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     2  1.45
+#>  3 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     3  1.46
+#>  4 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     4  1.47
+#>  5 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     5  1.47
+#>  6 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     6  1.45
+#>  7 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     7  1.48
+#>  8 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     8  1.46
+#>  9 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     9  1.47
+#> 10 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA    10  1.46
+#> # … with 1,226,870 more rows, and abbreviated variable names ¹​target_type,
+#> #   ²​sample_type, ³​dilution
+#> # ℹ Use `print(n = ...)` to see more rows
+```
+
+Types of samples:
+
+``` r
+count(
+  distinct(biomarker, plate, well, sample_type, copies, dilution),
+  sample_type,
+  copies,
+  dilution
+)
+#> # A tibble: 7 × 4
+#>   sample_type copies dilution     n
+#>   <fct>        <int>    <dbl> <int>
+#> 1 ntc              0      Inf   192
+#> 2 std             15    10000   192
+#> 3 std            150     1000   192
+#> 4 std           1500      100   192
+#> 5 std          15000       10   192
+#> 6 std         150000        1   192
+#> 7 unk             NA       NA 23424
+```
+
 Alternatively, if you want only a selection of variables you may use the
 following helpers:
 
@@ -46,40 +102,6 @@ following helpers:
 -   `reactions()`
 -   `targets()`
 -   `samples()`
-
-``` r
-library(vermeulen)
-library(tidyverse)
-
-# Takes a few seconds (downloading from GitHub...)
-biomarker <- as_tibble(ds_biomarker())
-biomarker
-#> # A tibble: 1,226,880 × 10
-#>    plate well  dye   target target_type sample sample_type dilution cycle fluor
-#>    <fct> <fct> <fct> <fct>  <fct>       <chr>  <fct>          <dbl> <int> <dbl>
-#>  1 AHCY  A1    SYBR  AHCY   toi         1495   unk               NA     1  1.10
-#>  2 AHCY  A1    SYBR  AHCY   toi         1495   unk               NA     2  1.45
-#>  3 AHCY  A1    SYBR  AHCY   toi         1495   unk               NA     3  1.46
-#>  4 AHCY  A1    SYBR  AHCY   toi         1495   unk               NA     4  1.47
-#>  5 AHCY  A1    SYBR  AHCY   toi         1495   unk               NA     5  1.47
-#>  6 AHCY  A1    SYBR  AHCY   toi         1495   unk               NA     6  1.45
-#>  7 AHCY  A1    SYBR  AHCY   toi         1495   unk               NA     7  1.48
-#>  8 AHCY  A1    SYBR  AHCY   toi         1495   unk               NA     8  1.46
-#>  9 AHCY  A1    SYBR  AHCY   toi         1495   unk               NA     9  1.47
-#> 10 AHCY  A1    SYBR  AHCY   toi         1495   unk               NA    10  1.46
-#> # … with 1,226,870 more rows
-#> # ℹ Use `print(n = ...)` to see more rows
-```
-
-``` r
-biomarker %>%
-  ggplot(mapping = aes(x = cycle, y = fluor, group = interaction(plate, well), col = sample_type)) +
-  geom_line() +
-  facet_wrap(vars(target), ncol = 4) +
-  geom_line(size = 0.1)
-```
-
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
 ## Code of Conduct
 

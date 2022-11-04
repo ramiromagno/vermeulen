@@ -9,13 +9,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+
+```{r dpi=300, fig.width=8, fig.height=16, warning=FALSE, message=FALSE}
 library(vermeulen)
-library(tidyverse)
-```
+library(tibble)
+library(ggplot2)
 
+# Takes a few seconds (downloading from GitHub...)
+biomarker <- as_tibble(ds_biomarker())
 
-```{r dpi=300, fig.width=8, fig.height=16}
 biomarker %>%
   ggplot(mapping = aes(x = cycle, y = fluor, group = interaction(plate, well), col = sample_type)) +
   geom_line() +
