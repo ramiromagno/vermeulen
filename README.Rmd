@@ -50,7 +50,7 @@ Because of CRAN size limits the data is not provided at installation time. The
 data can be retrieved from this GitHub repository after installation with the
 function `ds_biomarker()`.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(vermeulen)
 library(tibble)
 library(dplyr)

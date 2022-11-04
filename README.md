@@ -43,14 +43,6 @@ installation with the function `ds_biomarker()`.
 library(vermeulen)
 library(tibble)
 library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
 library(ggplot2)
 
 # Takes a few seconds (downloading from GitHub...)

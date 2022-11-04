@@ -6,7 +6,7 @@
 \source{
 \itemize{
 \item \url{https://medischebiologie.nl/wp-content/uploads/2019/02/qpcrdatamethods.zip}
-\item \url{https://github.com/ramiromagno/vermeulen/blob/main/data-raw}
+\item \url{https://github.com/ramiromagno/vermeulen/tree/main/data-raw}
 }
 }
 \usage{

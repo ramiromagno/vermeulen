@@ -30,7 +30,7 @@
 #'
 #' @source
 #' - \url{https://medischebiologie.nl/wp-content/uploads/2019/02/qpcrdatamethods.zip}
-#' - \url{https://github.com/ramiromagno/vermeulen/blob/main/data-raw}
+#' - \url{https://github.com/ramiromagno/vermeulen/tree/main/data-raw}
 #'
 #' @examples
 #' \dontrun{
