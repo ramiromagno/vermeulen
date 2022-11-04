@@ -22,6 +22,7 @@
 #' reference target (`"ref"`).}
 #' \item{`sample`}{Sample identifier.}
 #' \item{`sample_type`}{Sample type.}
+#' \item{`copies`}{Standard copy number.}
 #' \item{`dilution`}{Dilution factor. Higher number means greater dilution.}
 #' \item{`cycle`}{PCR cycle.}
 #' \item{`fluor`}{Raw fluorescence values.}
@@ -50,7 +51,7 @@ ds_biomarker <- function() {
   df03 <- merge(x = df02, y = targets, by = "target", all.x = TRUE)
 
   # Arrange rows and columns order.
-  cols_order <- c("plate", "well", "dye", "target", "target_type", "sample", "sample_type", "dilution", "cycle", "fluor")
+  cols_order <- c("plate", "well", "dye", "target", "target_type", "sample", "sample_type", "copies", "dilution", "cycle", "fluor")
   ordering <- order(df03$plate, df03$well, df03$cycle)
   ds_biomarker <- df03[ordering, cols_order]
 

@@ -26,6 +26,7 @@ so the value is always \code{"SYBR"}.}
 reference target (\code{"ref"}).}
 \item{\code{sample}}{Sample identifier.}
 \item{\code{sample_type}}{Sample type.}
+\item{\code{copies}}{Standard copy number.}
 \item{\code{dilution}}{Dilution factor. Higher number means greater dilution.}
 \item{\code{cycle}}{PCR cycle.}
 \item{\code{fluor}}{Raw fluorescence values.}

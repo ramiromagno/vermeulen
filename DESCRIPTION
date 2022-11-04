@@ -28,6 +28,8 @@ Roxygen: list(markdown = TRUE)
 Imports: 
     memoise
 Suggests: 
+    dplyr,
+    ggplot2,
     rmarkdown,
     spelling
 Language: en-US
