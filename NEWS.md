@@ -1,3 +1,7 @@
+# vermeulen 0.1.2
+
+* Update maintainer email.
+
 # vermeulen 0.1.1
 
 * There is now only one function, `get_biomarker_dataset()`, that allows to
