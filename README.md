@@ -7,6 +7,7 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/vermeulen)](https://CRAN.R-project.org/package=vermeulen)
+[![R-CMD-check](https://github.com/ramiromagno/vermeulen/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ramiromagno/vermeulen/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 `{vermeulen}` provides the Biomarker data set by [Vermeulen et al.
@@ -15,9 +16,9 @@ status](https://www.r-pkg.org/badges/version/vermeulen)](https://CRAN.R-project.
 This data set is for a real-time quantitative PCR experiment that
 comprises:
 
--   The raw fluorescence data of 24,576 amplification curves.
--   64 targets: 59 genes of interest and 5 reference genes.
--   366 neuroblastoma cDNA samples and 18 dilution series samples.
+- The raw fluorescence data of 24,576 amplification curves.
+- 64 targets: 59 genes of interest and 5 reference genes.
+- 366 neuroblastoma cDNA samples and 18 dilution series samples.
 
 ## Installation
 
@@ -51,21 +52,20 @@ library(dplyr)
 biomarker <- as_tibble(get_biomarker_dataset())
 biomarker
 #> # A tibble: 1,226,880 × 11
-#>    plate well  dye   target target_t…¹ sample sampl…² copies dilut…³ cycle fluor
-#>    <fct> <fct> <fct> <fct>  <fct>      <chr>  <fct>    <int>   <dbl> <int> <dbl>
-#>  1 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     1  1.10
-#>  2 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     2  1.45
-#>  3 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     3  1.46
-#>  4 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     4  1.47
-#>  5 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     5  1.47
-#>  6 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     6  1.45
-#>  7 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     7  1.48
-#>  8 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     8  1.46
-#>  9 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA     9  1.47
-#> 10 AHCY  A1    SYBR  AHCY   toi        1495   unk         NA      NA    10  1.46
-#> # … with 1,226,870 more rows, and abbreviated variable names ¹​target_type,
-#> #   ²​sample_type, ³​dilution
-#> # ℹ Use `print(n = ...)` to see more rows
+#>    plate well  dye   target target_type sample sample_type copies dilution cycle
+#>    <fct> <fct> <fct> <fct>  <fct>       <chr>  <fct>        <int>    <dbl> <int>
+#>  1 AHCY  A1    SYBR  AHCY   toi         1495   unk             NA       NA     1
+#>  2 AHCY  A1    SYBR  AHCY   toi         1495   unk             NA       NA     2
+#>  3 AHCY  A1    SYBR  AHCY   toi         1495   unk             NA       NA     3
+#>  4 AHCY  A1    SYBR  AHCY   toi         1495   unk             NA       NA     4
+#>  5 AHCY  A1    SYBR  AHCY   toi         1495   unk             NA       NA     5
+#>  6 AHCY  A1    SYBR  AHCY   toi         1495   unk             NA       NA     6
+#>  7 AHCY  A1    SYBR  AHCY   toi         1495   unk             NA       NA     7
+#>  8 AHCY  A1    SYBR  AHCY   toi         1495   unk             NA       NA     8
+#>  9 AHCY  A1    SYBR  AHCY   toi         1495   unk             NA       NA     9
+#> 10 AHCY  A1    SYBR  AHCY   toi         1495   unk             NA       NA    10
+#> # ℹ 1,226,870 more rows
+#> # ℹ 1 more variable: fluor <dbl>
 ```
 
 Types of samples:

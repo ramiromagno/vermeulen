@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 
 [![CRAN status](https://www.r-pkg.org/badges/version/vermeulen)](https://CRAN.R-project.org/package=vermeulen)
+[![R-CMD-check](https://github.com/ramiromagno/vermeulen/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ramiromagno/vermeulen/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 `{vermeulen}` provides the Biomarker data set by [Vermeulen et al.
