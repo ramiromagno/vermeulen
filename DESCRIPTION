@@ -3,7 +3,7 @@ Type: Package
 Title: 'Biomarker' Data Set by Vermeulen et al. (2009)
 Version: 0.1.1
 Authors@R: c(
-    person(given = "Ramiro", family = "Magno", email = "ramiro.magno@gmail.com",
+    person(given = "Ramiro", family = "Magno", email = "rmagno@pattern.institute",
     role = c("aut", "cre"), comment = c(ORCID = "0000-0001-5226-3441")),
     person("Pattern Institute",
     role = c("cph", "fnd"))
@@ -23,7 +23,7 @@ Description: The 'biomarker' data set by Vermeulen et al. (2009)
     replicates).
 License: CC BY 4.0
 Encoding: UTF-8
-RoxygenNote: 7.2.1
+RoxygenNote: 7.3.1
 Depends: 
     R (>= 2.10)
 Roxygen: list(markdown = TRUE)
